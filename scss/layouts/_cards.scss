@@ -1,0 +1,102 @@
+@use '../util' as u;
+
+.card-background {
+  position: relative;
+}
+
+.card-back {
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  @include u.breakpoint(medium) {
+    top: 50%;
+    left: 20%;
+  }
+
+  &__image {
+    img {
+      width: 90%;
+
+      @include u.breakpoint(medium) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 42%;
+    right: 20%;
+
+    @include u.breakpoint(medium) {
+      top: 48%;
+      right: 12%;
+      transform: translateY(-48%);
+    }
+
+    P {
+      font-size: var(--fs-13px);
+      color: var(--White);
+    }
+  }
+}
+
+.card-front {
+  position: absolute;
+  top: 17%;
+  left: 5%;
+  @include u.breakpoint(medium) {
+    top: 5%;
+  }
+
+  &__image {
+    width: 90%;
+    max-width: none;
+
+    @include u.breakpoint(medium) {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    color: var(--White);
+    padding: 1.1rem;
+    @media (min-width: 300px) {
+      padding: 0.5rem;
+    }
+    @include u.breakpoint(medium) {
+      padding: 1.3rem;
+      width: 100%;
+    }
+    &-image {
+      margin-block-end: 0.7rem;
+      @media (min-width: 300px) {
+        margin-block-end: 0.3rem;
+      }
+      @include u.breakpoint(VerySmall) {
+        margin-block-end: 1.3rem;
+      }
+
+      @media (min-width: 390px) {
+        margin-block-end: 2.5rem;
+      }
+      @media (min-width: 450px) {
+        margin-block-end: 3.5rem;
+      }
+      @include u.breakpoint(medium) {
+        margin-block-end: 4rem;
+      }
+    }
+  }
+
+  &__name {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 2rem;
+    font-size: var(--fs-15px);
+  }
+}

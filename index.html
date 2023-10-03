@@ -11,39 +11,40 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="dist/style.css" />
 
     <script src="js/app.js" defer></script>
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
   <body>
     <div class="container">
-      <picture>
+      <picture class="card-background">
         <source
           media="(min-width: 600px)"
           srcset="images/bg-main-desktop.png"
         />
-        <img src="images/bg-main-mobile.png" alt="bg-main-mobile" />
+        <img src="images/bg-main-mobile-big.png" alt="bg-main-mobile" />
       </picture>
 
       <div class="card-back">
-        <div class="card-back-image">
+        <div class="card-back__image">
           <img src="images/bg-card-back.png" alt="" />
         </div>
-        <div class="card-back-content">
-          <!-- <p>123</p> -->
+        <div class="card-back__content">
+          <p>123</p>
         </div>
       </div>
 
       <div class="card-front">
-        <div class="card-front-image">
+        <div class="card-front__image">
           <img src="images/bg-card-front.png" alt="" />
         </div>
-        <div class="card-front-content">
-          <div class="card-front-content__image">
+        <div class="card-front__content">
+          <div class="card-front__content-image">
             <img src="images/card-logo.svg" alt="" />
           </div>
           <h2>9591 6489 6389 1011</h2>
-          <div class="card-name">
+          <div class="card-front__name">
             <h3>Felicia Leire</h3>
             <p>09/26</p>
           </div>
